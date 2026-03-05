@@ -14,7 +14,7 @@ def main():
 
     logging.info("Начинаем загрузку")
 
-    response = requests.get(url)
+    response = requests.get(url, timeout=(5, 30))
     file_size = len(response.content)
     if response.status_code != 200:
         print('Что-то пошло не так')
