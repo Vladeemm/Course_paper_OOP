@@ -5,6 +5,7 @@ import json
 from urllib.parse import quote
 from setting import yd_token
 
+
 def main():
     logging.basicConfig(level=logging.INFO, format='%(message)s')
 
@@ -69,5 +70,6 @@ def main():
         json.dump(info, jf, ensure_ascii=False, indent=4)
 
     return f'Создан файл: {json_path}'
+
 
 print(main())
